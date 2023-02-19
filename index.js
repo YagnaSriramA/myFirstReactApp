@@ -75,8 +75,13 @@
 function Header() {
     return(
         <header>
-            <nav>
-                <img src="download.svg"></img>
+            <nav className="bar">
+                <img src="download.svg" className="logoo"></img>
+                <ul className="bar-items">
+                    <li>Pricing</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
             </nav>
         </header>
     )
@@ -85,7 +90,7 @@ function Header() {
 function TheRest()
 {
     return(
-        <div>
+        <div className="rest">
             <h2>
             Reasons why I am excited to learn React
             </h2>
@@ -104,7 +109,7 @@ function TheRest()
 function Footer()
 {
     return(
-        <footer>
+        <footer className="footstuff">
         &#169; 2023 Amballa development. All rights reserved
     </footer>
     )
