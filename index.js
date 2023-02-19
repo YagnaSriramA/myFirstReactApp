@@ -72,15 +72,20 @@
 //     )
 // }
 
+function Header() {
+    return(
+        <header>
+            <nav>
+                <img src="download.svg"></img>
+            </nav>
+        </header>
+    )
+}
 
-function Page(){
-    return (
-        <html>
-            <header>
-                <nav>
-                    <img src="download.svg"></img>
-                </nav>
-            </header>
+function TheRest()
+{
+    return(
+        <div>
             <h2>
             Reasons why I am excited to learn React
             </h2>
@@ -92,13 +97,31 @@ function Page(){
                  <li>I can afford a comfortable lifestyle with the package that react gets me</li>
                  <li>Makes me more hireable</li>
             </ol> 
-            <footer>
-                &#169; 2023 Amballa development. All rights reserved
-            </footer>
-
-        </html>
-        
+        </div>
     )
 }
 
-ReactDOM.render(<Page />, document.getElementById('root'))
+function Footer()
+{
+    return(
+        <footer>
+        &#169; 2023 Amballa development. All rights reserved
+    </footer>
+    )
+}
+
+
+
+function Page(){
+    return (
+        <html>
+            <Header />
+            <TheRest />
+            <Footer />
+        </html>
+        )
+}
+
+
+// ReactDOM.render(<Header />, document.getElementById('root'))
+ReactDOM.render(<Page />,  document.getElementById('root'))
